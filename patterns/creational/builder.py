@@ -1,5 +1,6 @@
 '''
-    Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+    Separate the construction of a complex object from its representation so that 
+    the same construction process can create different representations.
     Parse a complex representation, create one of several targets.
 
 https://gist.github.com/pazdera/1121157
@@ -23,7 +24,8 @@ class Database(object):
     self._orm = orm
 
   def getSpecification(self):
-    return self._connection.for_database, self._dyalects.for_database, self._orm.for_database
+    return (self._connection.for_database, self._dyalects.for_database,
+            self._orm.for_database)
 
 
 class Connection(object):
